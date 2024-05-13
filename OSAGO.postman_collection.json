@@ -1,0 +1,1945 @@
+{
+	"info": {
+		"_postman_id": "5cbceb41-1455-43bc-81e5-e368b9357f31",
+		"name": "OSAGO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19032433"
+	},
+	"item": [
+		{
+			"name": "E-osgo",
+			"item": [
+				{
+					"name": "check",
+					"item": [
+						{
+							"name": "payment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"anketa_id\": 41282\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/check/payment",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"check",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "reference",
+					"item": [
+						{
+							"name": "vehicle-types",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/reference/vehicle-types",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"reference",
+										"vehicle-types"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ru",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/reference/vehicle-types",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"reference",
+												"vehicle-types"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 20:12:42 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "917"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"ID\": \"1\",\n        \"NAME\": \"ЛЕГКОВЫЕ АВТО ДО 1200 КУБ. СМ.\"\n    },\n    {\n        \"ID\": \"6\",\n        \"NAME\": \"ГРУЗОВЫЕ АВТО ДО 10 ТОНН\"\n    },\n    {\n        \"ID\": \"9\",\n        \"NAME\": \"АВТОБУСЫ С ЧИСЛОМ МЕСТ СВЫШЕ 20\"\n    },\n    {\n        \"ID\": \"15\",\n        \"NAME\": \"ТРАМВАИ, МОТОЦИКЛЫ И МОТОРОЛЛЕРА, ТРАКТОРА, САМОХОДНЫЕ СТРОИТЕЛЬНЫЕ МАШИНЫ И ДРУГИЕ\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "discounts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ru",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/reference/discounts",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"reference",
+										"discounts"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ru",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/reference/discounts",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"reference",
+												"discounts"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 20:18:08 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1488"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=99"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"ID\": \"1\",\n        \"NAME\": \"БЕЗ ЛЬГОТ\"\n    },\n    {\n        \"ID\": \"2\",\n        \"NAME\": \"ПЕНСИОНЕР\"\n    },\n    {\n        \"ID\": \"3\",\n        \"NAME\": \"ИНВАЛИД\"\n    },\n    {\n        \"ID\": \"4\",\n        \"NAME\": \"УЧАСТНИК ВОЙНЫ 1941-1945 ЛИБО ПРИРАВНЕННЫМИ К НИМ ЛИЦАМИ\"\n    },\n    {\n        \"ID\": \"5\",\n        \"NAME\": \"ВЕТЕРАН ТРУДОВОГО ФРОНТА 1941-1945\"\n    },\n    {\n        \"ID\": \"6\",\n        \"NAME\": \"БЫВШИЙ УЗНИК КОНЦЕНТРАЦИОННЫХ ЛАГЕРЕЙ\"\n    },\n    {\n        \"ID\": \"7\",\n        \"NAME\": \"ВДОВА/РОДИТЕЛЬ ПОГИБШЕГО ВОЕННОСЛУЖАЩЕГО\"\n    },\n    {\n        \"ID\": \"8\",\n        \"NAME\": \"ПОСТРАДАВШИЙ В ЧЕРНОБОЛЬСКОЙ АЭС\"\n    },\n    {\n        \"ID\": \"9\",\n        \"NAME\": \"УЧАСТНИКИ АФГАНСКОЙ ВОЙНЫ\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "regions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ru",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/reference/regions",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"reference",
+										"regions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ru",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/reference/regions",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"reference",
+												"regions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 20:18:36 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1878"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=99"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"ID\": \"10\",\n        \"NAME\": \"г.Ташкент\"\n    },\n    {\n        \"ID\": \"11\",\n        \"NAME\": \"Ташкентский область\"\n    },\n    {\n        \"ID\": \"12\",\n        \"NAME\": \"Сырдарьинский область\"\n    },\n    {\n        \"ID\": \"13\",\n        \"NAME\": \"Джиззакский область\"\n    },\n    {\n        \"ID\": \"14\",\n        \"NAME\": \"Самаркандский область\"\n    },\n    {\n        \"ID\": \"15\",\n        \"NAME\": \"Ферганский область\"\n    },\n    {\n        \"ID\": \"16\",\n        \"NAME\": \"Наманганский область\"\n    },\n    {\n        \"ID\": \"17\",\n        \"NAME\": \"Андижанский область\"\n    },\n    {\n        \"ID\": \"18\",\n        \"NAME\": \"Кашкадарьинский область\"\n    },\n    {\n        \"ID\": \"19\",\n        \"NAME\": \"Сурхандарьинский область\"\n    },\n    {\n        \"ID\": \"20\",\n        \"NAME\": \"Бухарский область\"\n    },\n    {\n        \"ID\": \"21\",\n        \"NAME\": \"Навоийский область \"\n    },\n    {\n        \"ID\": \"22\",\n        \"NAME\": \"Хорезмский область\"\n    },\n    {\n        \"ID\": \"23\",\n        \"NAME\": \"Республика Каракалпаскистан\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "districts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ru",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/reference/districts?id=11",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"reference",
+										"districts"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ru",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/reference/districts?id=11",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"reference",
+												"districts"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "11"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 20:19:25 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2735"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"ID\": \"1101\",\n        \"NAME\": \"Янгиюльский район\"\n    },\n    {\n        \"ID\": \"1102\",\n        \"NAME\": \"Занги-Атинский район\"\n    },\n    {\n        \"ID\": \"1103\",\n        \"NAME\": \"Пскентский район \"\n    },\n    {\n        \"ID\": \"1104\",\n        \"NAME\": \"Паркентский район\"\n    },\n    {\n        \"ID\": \"1105\",\n        \"NAME\": \"Уртачирчикский район\"\n    },\n    {\n        \"ID\": \"1106\",\n        \"NAME\": \"Аккурганский район\"\n    },\n    {\n        \"ID\": \"1107\",\n        \"NAME\": \"Куйичирчикский район\"\n    },\n    {\n        \"ID\": \"1108\",\n        \"NAME\": \"Кибрайский район\"\n    },\n    {\n        \"ID\": \"1109\",\n        \"NAME\": \"Ташкентский район\"\n    },\n    {\n        \"ID\": \"1110\",\n        \"NAME\": \"Ахангаранский район\"\n    },\n    {\n        \"ID\": \"1111\",\n        \"NAME\": \"Бекабадский район\"\n    },\n    {\n        \"ID\": \"1112\",\n        \"NAME\": \"Бостанлыкский район\"\n    },\n    {\n        \"ID\": \"1113\",\n        \"NAME\": \"Букинский район\"\n    },\n    {\n        \"ID\": \"1114\",\n        \"NAME\": \"Юкоричирчикский район\"\n    },\n    {\n        \"ID\": \"1115\",\n        \"NAME\": \"Чиназский район\"\n    },\n    {\n        \"ID\": \"1116\",\n        \"NAME\": \"город Ангрен\"\n    },\n    {\n        \"ID\": \"1117\",\n        \"NAME\": \"город Бекобод\"\n    },\n    {\n        \"ID\": \"1118\",\n        \"NAME\": \"город Олмалик\"\n    },\n    {\n        \"ID\": \"1119\",\n        \"NAME\": \"г. Ахангаран\"\n    },\n    {\n        \"ID\": \"1120\",\n        \"NAME\": \"город Чирчик\"\n    },\n    {\n        \"ID\": \"1121\",\n        \"NAME\": \"город Янгиобод\"\n    },\n    {\n        \"ID\": \"1122\",\n        \"NAME\": \"город Янгийул\"\n    },\n    {\n        \"ID\": \"1123\",\n        \"NAME\": \"ГОРОД АХАНГАРАН\"\n    },\n    {\n        \"ID\": \"2405\",\n        \"NAME\": \"г. Нурафшон\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "resident",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ru",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/reference/resident",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"reference",
+										"resident"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ru",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/reference/resident",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"reference",
+												"resident"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 20:20:33 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "758"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"ID\": \"1\",\n        \"NAME\": \"Гражданин (УзР фуқароси)\"\n    },\n    {\n        \"ID\": \"2\",\n        \"NAME\": \"Иностранец (чет эл фуқароси)\"\n    },\n    {\n        \"ID\": \"3\",\n        \"NAME\": \"ЛБГ (фуқаролиги йўқ)\"\n    },\n    {\n        \"ID\": \"4\",\n        \"NAME\": \"Военный (ҳарбий)\"\n    },\n    {\n        \"ID\": \"5\",\n        \"NAME\": \"Иностранный резидент (чет эл резиденти)\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "relatives",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ru",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/reference/relatives",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"reference",
+										"relatives"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ru",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/reference/relatives",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"reference",
+												"relatives"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 20:21:41 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "440"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"ID\": \"0\",\n        \"NAME\": \"..\"\n    },\n    {\n        \"ID\": \"1\",\n        \"NAME\": \"ОТА\"\n    },\n    {\n        \"ID\": \"2\",\n        \"NAME\": \"ОНА\"\n    },\n    {\n        \"ID\": \"3\",\n        \"NAME\": \"ЭР\"\n    },\n    {\n        \"ID\": \"4\",\n        \"NAME\": \"ХОТИН\"\n    },\n    {\n        \"ID\": \"5\",\n        \"NAME\": \"ЎFИЛ\"\n    },\n    {\n        \"ID\": \"6\",\n        \"NAME\": \"КИЗ\"\n    },\n    {\n        \"ID\": \"7\",\n        \"NAME\": \"АКА\"\n    },\n    {\n        \"ID\": \"8\",\n        \"NAME\": \"УКА\"\n    },\n    {\n        \"ID\": \"9\",\n        \"NAME\": \"ОПА\"\n    },\n    {\n        \"ID\": \"10\",\n        \"NAME\": \"СИНГИЛ\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "use-territory-regions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ru",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/reference/use-territory-regions",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"reference",
+										"use-territory-regions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ru",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/reference/use-territory-regions",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"reference",
+												"use-territory-regions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 20:22:08 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2155"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"ID\": \"1\",\n        \"NAME\": \"ГОРОД ТАШКЕНТ, РУз\"\n    },\n    {\n        \"ID\": \"2\",\n        \"NAME\": \"ТАШКЕНТСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"3\",\n        \"NAME\": \"АНДИЖАНСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"4\",\n        \"NAME\": \"БУХАРСКАЯ  ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"5\",\n        \"NAME\": \"ДЖИЗАКСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"6\",\n        \"NAME\": \"КАШКАДАРЬИНСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"7\",\n        \"NAME\": \"РЕСПУБЛИКА КАРАКАЛПАКСТАН, РУз\"\n    },\n    {\n        \"ID\": \"8\",\n        \"NAME\": \"НАВОИСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"9\",\n        \"NAME\": \"НАМАНГАНСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"10\",\n        \"NAME\": \"САМАРКАНДСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"11\",\n        \"NAME\": \"СЫРЬДАРЬИНСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"12\",\n        \"NAME\": \"СУРХАНДАРЬИНСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"13\",\n        \"NAME\": \"ФЕРГАНСКАЯ ОБЛАСТЬ, РУз\"\n    },\n    {\n        \"ID\": \"14\",\n        \"NAME\": \"ХОРЕЗМСКАЯ ОБЛАСТЬ, РУз\"\n    }\n]"
+								}
+							]
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "provider",
+					"item": [
+						{
+							"name": "calc-prem",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"vehicle\": 1,\r\n  \"use_territory\": 2,\r\n  \"period\": 2,\r\n  \"driver_limit\": 0,\r\n  \"discount\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/provider/calc-prem",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"provider",
+										"calc-prem"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"vehicle\": 1,\r\n  \"use_territory\": 2,\r\n  \"period\": 2,\r\n  \"driver_limit\": 0,\r\n  \"discount\": 0\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/provider/calc-prem",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"provider",
+												"calc-prem"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sat, 16 Apr 2022 12:34:16 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "15"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"prem\": 168000\n}"
+								}
+							]
+						},
+						{
+							"name": "vehicle",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"techPassportSeria\": \"AAF\",\r\n  \"techPassportNumber\": \"3523002\",\r\n  \"govNumber\": \"10X654WA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/provider/vehicle",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"provider",
+										"vehicle"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"techPassportSeria\": \"AAF\",\r\n  \"techPassportNumber\": \"3523002\",\r\n  \"govNumber\": \"10X654WA\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/provider/vehicle",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"provider",
+												"vehicle"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 25 Apr 2022 10:28:52 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "389"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"ERROR_MESSAGE\": null,\n    \"TECH_PASSPORT_ISSUE_DATE\": \"28.10.2021\",\n    \"MARKA_ID\": \"13\",\n    \"MODEL_ID\": \"4324\",\n    \"VEHICLE_TYPE_ID\": \"1\",\n    \"MODEL_NAME\": \"MALIBU\",\n    \"ISSUE_YEAR\": \"2013\",\n    \"BODY_NUMBER\": \"KL1GA69U9DB058526\",\n    \"ENGINE_NUMBER\": \"9131430154\",\n    \"FY\": \"0\",\n    \"ORGNAME\": \"SOBIROV ELYOR UCHQUNOVICH\",\n    \"LAST_NAME\": \"SOBIROV\",\n    \"FIRST_NAME\": \"ELYOR\",\n    \"MIDDLE_NAME\": \"UCHQUNOVICH\",\n    \"INN\": null,\n    \"ERROR\": \"0\",\n    \"PINFL\": \"32901930590153\"\n}"
+								}
+							]
+						},
+						{
+							"name": "passport-birth-date",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"birthDate\": \"29.01.1993\",\r\n  \"passportSeries\": \"AD\",\r\n  \"passportNumber\": \"0735021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/provider/passport-birth-date",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"provider",
+										"passport-birth-date"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"birthDate\": \"27.10.1992\",\r\n  \"passportSeries\": \"AA\",\r\n  \"passportNumber\": \"2137528\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/provider/passport-birth-date",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"provider",
+												"passport-birth-date"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 14 Apr 2022 21:30:52 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "153"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"ERROR_MESSAGE\": null,\n    \"ERROR\": \"0\",\n    \"PINFL\": \"32710921571422\",\n    \"LAST_NAME\": \"HAQBERDIYEV\",\n    \"FIRST_NAME\": \"SHOHRUX\",\n    \"MIDDLE_NAME\": \"ALLAMUROT O‘G‘LI\",\n    \"REGION_ID\": \"13\",\n    \"DISTRICT_ID\": \"1307\"\n}"
+								}
+							]
+						},
+						{
+							"name": "is-pensioner",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pinfl\": \"32008635180048\",\r\n  \"passportSeries\": \"AB\",\r\n  \"passportNumber\": \"9637892\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/provider/is-pensioner",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"provider",
+										"is-pensioner"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"pinfl\": \"32710921571422\",\r\n  \"passportSeries\": \"AA\",\r\n  \"passportNumber\": \"2137528\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl}}/osgo/provider/passport-pinfl",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"osgo",
+												"provider",
+												"passport-pinfl"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 19:40:40 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "217"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"LAST_NAME_LATIN\": \"HAQBERDIYEV\",\n    \"FIRST_NAME_LATIN\": \"SHOHRUX\",\n    \"MIDDLE_NAME_LATIN\": \"ALLAMUROT O‘G‘LI\",\n    \"BIRTH_DATE\": \"27.10.1992\",\n    \"OBLAST\": \"13\",\n    \"RAYON\": \"1307\",\n    \"ISPENSIONER\": \"1\",\n    \"ERROR_MESSAGE\": null,\n    \"ERROR\": \"0\"\n}"
+								}
+							]
+						},
+						{
+							"name": "provided-discounts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pinfl\": \"32008635180048\",\r\n  \"govNumber\": \"60G328RB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/provider/provided-discounts",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"provider",
+										"provided-discounts"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"pinfl\": \"32710921571422\",\r\n  \"passportSeries\": \"AA\",\r\n  \"passportNumber\": \"2137528\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseurl}}/osgo/provider/passport-pinfl",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"osgo",
+												"provider",
+												"passport-pinfl"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 19:40:40 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "217"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"LAST_NAME_LATIN\": \"HAQBERDIYEV\",\n    \"FIRST_NAME_LATIN\": \"SHOHRUX\",\n    \"MIDDLE_NAME_LATIN\": \"ALLAMUROT O‘G‘LI\",\n    \"BIRTH_DATE\": \"27.10.1992\",\n    \"OBLAST\": \"13\",\n    \"RAYON\": \"1307\",\n    \"ISPENSIONER\": \"1\",\n    \"ERROR_MESSAGE\": null,\n    \"ERROR\": \"0\"\n}"
+								}
+							]
+						},
+						{
+							"name": "passport-pinfl",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pinfl\": \"32710921571422\",\r\n  \"passportSeries\": \"AA\",\r\n  \"passportNumber\": \"2137528\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/provider/passport-pinfl",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"provider",
+										"passport-pinfl"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"pinfl\": \"32710921571422\",\r\n  \"passportSeries\": \"AA\",\r\n  \"passportNumber\": \"2137528\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/provider/passport-pinfl",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"provider",
+												"passport-pinfl"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 19:40:40 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "217"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"LAST_NAME_LATIN\": \"HAQBERDIYEV\",\n    \"FIRST_NAME_LATIN\": \"SHOHRUX\",\n    \"MIDDLE_NAME_LATIN\": \"ALLAMUROT O‘G‘LI\",\n    \"BIRTH_DATE\": \"27.10.1992\",\n    \"OBLAST\": \"13\",\n    \"RAYON\": \"1307\",\n    \"ISPENSIONER\": \"1\",\n    \"ERROR_MESSAGE\": null,\n    \"ERROR\": \"0\"\n}"
+								}
+							]
+						},
+						{
+							"name": "driver-license",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pinfl\": \"32901930590153\",\r\n  \"passportSeries\": \"AD\",\r\n  \"passportNumber\": \"0735024\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/provider/driver-license",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"provider",
+										"driver-license"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"pinfl\": \"32710921571422\",\r\n  \"passportSeries\": \"AA\",\r\n  \"passportNumber\": \"2137528\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/provider/driver-license",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"provider",
+												"driver-license"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 14 Apr 2022 21:38:14 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "110"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"ERROR_MESSAGE\": null,\n    \"ERROR\": \"0\",\n    \"LICENSE_SERIA\": \"AF\",\n    \"LICENSE_NUMBER\": \"2038986\",\n    \"ISSUE_DATE\": \"09.11.2020\"\n}"
+								}
+							]
+						},
+						{
+							"name": "driver-summary",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pinfl\": \"32710921571422\",\r\n  \"passportSeries\": \"AA\",\r\n  \"passportNumber\": \"2137528\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/provider/driver-summary",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"provider",
+										"driver-summary"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"pinfl\": \"32710921571422\",\r\n  \"passportSeries\": \"AA\",\r\n  \"passportNumber\": \"2137528\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/provider/driver-summary",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"provider",
+												"driver-summary"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 21:07:41 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "291"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"ERROR_MESSAGE\": null,\n    \"ERROR\": \"0\",\n    \"LAST_NAME_LATIN\": \"HAQBERDIYEV\",\n    \"FIRST_NAME_LATIN\": \"SHOHRUX\",\n    \"MIDDLE_NAME_LATIN\": \"ALLAMUROT O‘G‘LI\",\n    \"BIRTH_DATE\": \"27.10.1992\",\n    \"OBLAST\": \"13\",\n    \"RAYON\": \"1307\",\n    \"ISPENSIONER\": \"1\",\n    \"LICENSE_NUMBER\": \"2038986\",\n    \"LICENSE_SERIA\": \"AF\",\n    \"ISSUE_DATE\": \"09.11.2020\"\n}"
+								}
+							]
+						},
+						{
+							"name": "GNK PINFL",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.goodsign.biz/v1/profile/32710921571422",
+									"protocol": "https",
+									"host": [
+										"api",
+										"goodsign",
+										"biz"
+									],
+									"path": [
+										"v1",
+										"profile",
+										"32710921571422"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api.goodsign.biz/v1/profile/32710921571422",
+											"protocol": "https",
+											"host": [
+												"api",
+												"goodsign",
+												"biz"
+											],
+											"path": [
+												"v1",
+												"profile",
+												"32710921571422"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.20.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 May 2022 19:42:51 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, PATCH, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Authorization , Access-Control-Request-Headers, X-CSRF-TOKEN"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"ns10Code\": 8,\n    \"ns11Code\": 2,\n    \"shortName\": \"HAQBERDIYEV SHOHRUX ALLAMUROT O‘G‘LI\",\n    \"tin\": \"584885109\",\n    \"name\": \"HAQBERDIYEV SHOHRUX ALLAMUROT O‘G‘LI\",\n    \"na1Code\": \"\",\n    \"na1Name\": \"\",\n    \"statusCode\": \"\",\n    \"statusName\": \"\",\n    \"mfo\": \"\",\n    \"account\": \"\",\n    \"address\": \"БАХМАЛЬСКИЙ р-н БАГИШАМАЛ АЛАМЛИ М ФЙ АЛАМЛИ ҚИШЛОҒИ Д.АЛАМЛИ, АЛАМЛИ\",\n    \"oked\": \"\",\n    \"directorTin\": \"\",\n    \"directorPinfl\": \"\",\n    \"director\": \"\",\n    \"accountant\": \"\",\n    \"isBudget\": 0,\n    \"isItd\": false,\n    \"personalNum\": \"32710921571422\",\n    \"selfEmployment\": false,\n    \"privateNotary\": false,\n    \"peasantFarm\": false,\n    \"fullName\": \"HAQBERDIYEV SHOHRUX ALLAMUROT O‘G‘LI\",\n    \"passSeries\": \"AA\",\n    \"passNumber\": \"2137528\",\n    \"passOrg\": \"JIZZAX VILOYATI BAXMAL TUMANI IIB\",\n    \"passIssueDate\": \"11.07.2013\",\n    \"districtId\": \"802\",\n    \"regionId\": \"8\",\n    \"passport\": \"AA2137528\",\n    \"bankAccount\": \"\",\n    \"bankCode\": \"\",\n    \"shortname\": \"HAQBERDIYEV SHOHRUX ALLAMUROT O‘G‘LI\",\n    \"regCode\": null,\n    \"VATRegCode\": null,\n    \"VATRegStatus\": null,\n    \"company\": false,\n    \"taxGap\": null,\n    \"inn\": \"584885109\",\n    \"bankId\": \"\",\n    \"vatRegCode\": null,\n    \"vat\": false\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "create",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"renumber\": \"10X654WA\",\r\n    \"texpsery\": \"AAF\",\r\n    \"texpnumber\": \"3523002\",\r\n    \"marka\": 13,\r\n    \"model\": 4324,\r\n    \"vmodel\": \"MALIBU\",\r\n    \"type\": 1,\r\n    \"texpdate\": \"28.10.2021\",\r\n    \"year\": \"2013\",\r\n    \"kuzov\": \"KL1GA69U9DB058526\",\r\n    \"dvigatel\": \"9131430154\",\r\n    \"use_territory\": 2,\r\n    \"owner_fy\": 0,\r\n    \"owner_pinfl\": \"32901930590153\",\r\n    \"owner_birthdate\": \"29.01.1993\",\r\n    \"owner_pasp_sery\": \"AD\",\r\n    \"owner_pasp_num\": \"0735024\",\r\n    \"owner_surname\": \"SOBIROV\",\r\n    \"owner_name\": \"ELYOR\",\r\n    \"owner_patronym\": \"UCHQUNOVICH\",\r\n    \"owner_isdriver\": 1,\r\n    \"owner_oblast\": 11,\r\n    \"owner_rayon\": 1115,\r\n    \"has_benefit\": 1,\r\n    \"owner_inn\": \"\",\r\n    \"owner_orgname\": \"\",\r\n    \"applicant_isowner\": 1,\r\n    \"owner_phone\": \"998974450544\",\r\n    \"appl_fizyur\": \"\",\r\n    \"appl_pinfl\": \"\",\r\n    \"appl_birthdate\": \"\",\r\n    \"appl_pasp_sery\": \"\",\r\n    \"appl_pasp_num\": \"\",\r\n    \"appl_surname\": \"\",\r\n    \"appl_name\": \"\",\r\n    \"appl_patronym\": \"\",\r\n    \"appl_oblast\": \"\",\r\n    \"appl_rayon\": \"\",\r\n    \"appl_inn\": \"\",\r\n    \"appl_orgname\": \"\",\r\n    \"driver_limit\": 1,\r\n    \"contract_begin\": \"09.06.2022\",\r\n    \"is_renewal\": 0,\r\n    \"old_polis\": \"\",\r\n    \"prem\": 56000,\r\n    \"opl_type\": \"1\",\r\n    \"dog_num\": \"\",\r\n    \"dog_date\": \"\",\r\n    \"drivers\": [\r\n        {\r\n            \"datebirth\": \"29.01.1993\",\r\n            \"paspsery\": \"AD\",\r\n            \"paspnumber\": \"0735024\",\r\n            \"pinfl\": \"32901930590153\",\r\n            \"surname\": \"SOBIROV\",\r\n            \"name\": \"ELYOR\",\r\n            \"patronym\": \"UCHQUNOVICH\",\r\n            \"licsery\": \"AF\",\r\n            \"licnumber\": \"3358585\",\r\n            \"licdate\": \"09.11.2020\",\r\n            \"relative\": 0,\r\n            \"resident\": 1\r\n        },\r\n        {\r\n            \"datebirth\": \"07.07.1997\",\r\n            \"paspsery\": \"AB\",\r\n            \"paspnumber\": \"5673510\",\r\n            \"pinfl\": \"30707975980021\",\r\n            \"surname\": \"SIROJIDDINOV\",\r\n            \"name\": \"ZIYOVIDDIN\",\r\n            \"patronym\": \"SHAROFIDDIN O‘G‘LI\",\r\n            \"licsery\": \"AF\",\r\n            \"licnumber\": \"3358585\",\r\n            \"licdate\": \"28.03.2018\",\r\n            \"relative\": 7,\r\n            \"resident\": 1\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/create/create",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"create",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"renumber\": \"10X654WA\",\r\n    \"texpsery\": \"AAF\",\r\n    \"texpnumber\": \"3523002\",\r\n    \"marka\": 13,\r\n    \"model\": 4324,\r\n    \"vmodel\": \"MALIBU\",\r\n    \"type\": 1,\r\n    \"texpdate\": \"28.10.2021\",\r\n    \"year\": \"2013\",\r\n    \"kuzov\": \"KL1GA69U9DB058526\",\r\n    \"dvigatel\": \"9131430154\",\r\n    \"use_territory\": 2,\r\n    \"owner_fy\": 0,\r\n    \"owner_pinfl\": \"32901930590153\",\r\n    \"owner_birthdate\": \"29.01.1993\",\r\n    \"owner_pasp_sery\": \"AD\",\r\n    \"owner_pasp_num\": \"0735024\",\r\n    \"owner_surname\": \"SOBIROV\",\r\n    \"owner_name\": \"ELYOR\",\r\n    \"owner_patronym\": \"UCHQUNOVICH\",\r\n    \"owner_isdriver\": 1,\r\n    \"owner_oblast\": 11,\r\n    \"owner_rayon\": 1115,\r\n    \"has_benefit\": 1,\r\n    \"owner_inn\": \"\",\r\n    \"owner_orgname\": \"\",\r\n    \"applicant_isowner\": 1,\r\n    \"owner_phone\": \"998974450544\",\r\n    \"appl_fizyur\": \"\",\r\n    \"appl_pinfl\": \"\",\r\n    \"appl_birthdate\": \"\",\r\n    \"appl_pasp_sery\": \"\",\r\n    \"appl_pasp_num\": \"\",\r\n    \"appl_surname\": \"\",\r\n    \"appl_name\": \"\",\r\n    \"appl_patronym\": \"\",\r\n    \"appl_oblast\": \"\",\r\n    \"appl_rayon\": \"\",\r\n    \"appl_inn\": \"\",\r\n    \"appl_orgname\": \"\",\r\n    \"driver_limit\": 1,\r\n    \"contract_begin\": \"18.05.2022\",\r\n    \"is_renewal\": 0,\r\n    \"old_polis\": \"\",\r\n    \"prem\": 56000,\r\n    \"opl_type\": \"8\",\r\n    \"drivers\": [\r\n        {\r\n            \"datebirth\": \"29.01.1993\",\r\n            \"paspsery\": \"AD\",\r\n            \"paspnumber\": \"0735024\",\r\n            \"pinfl\": \"32901930590153\",\r\n            \"surname\": \"SOBIROV\",\r\n            \"name\": \"ELYOR\",\r\n            \"patronym\": \"UCHQUNOVICH\",\r\n            \"licsery\": \"AF\",\r\n            \"licnumber\": \"3358585\",\r\n            \"licdate\": \"09.11.2020\",\r\n            \"relative\": 0,\r\n            \"resident\": 1\r\n        },\r\n        {\r\n            \"datebirth\": \"07.07.1997\",\r\n            \"paspsery\": \"AB\",\r\n            \"paspnumber\": \"5673510\",\r\n            \"pinfl\": \"30707975980021\",\r\n            \"surname\": \"SIROJIDDINOV\",\r\n            \"name\": \"ZIYOVIDDIN\",\r\n            \"patronym\": \"SHAROFIDDIN O‘G‘LI\",\r\n            \"licsery\": \"AF\",\r\n            \"licnumber\": \"3358585\",\r\n            \"licdate\": \"28.03.2018\",\r\n            \"relative\": 7,\r\n            \"resident\": 1\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{ebaseurl}}/osgo/create/create",
+											"host": [
+												"{{ebaseurl}}"
+											],
+											"path": [
+												"osgo",
+												"create",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 08 May 2022 12:55:00 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Apache/2.4.41 (Ubuntu)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "101"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5, max=100"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Proxy-Connection",
+											"value": "Keep-Alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error_code\": \"0\",\n    \"error_text\": \":\",\n    \"anketa_id\": \"46622\",\n    \"uuid\": \"4b9308a1-e4cd-4f3a-a3f9-1b3c2f52a114\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "filter",
+					"item": [
+						{
+							"name": "search",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"polis_sery\": \"EINL\",\r\n    \"polis_number\": \"\",\r\n    \"polis_status\": \"2\",\r\n    \"oplata_begin\": \"\",\r\n    \"oplata_end\": \"\",\r\n    \"fizyur\": 0,\r\n    \"gov_number\": \"\",\r\n    \"offset\": 0,\r\n    \"limit\": -1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/filter/search",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"filter",
+										"search"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get",
+					"item": [
+						{
+							"name": "anketa",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"anketa_id\": 71269\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ebaseurl}}/osgo/get/anketa",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"osgo",
+										"get",
+										"anketa"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Auth User",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ebaseurl}}/auth/login",
+							"host": [
+								"{{ebaseurl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ebaseurl}}/auth/login",
+									"host": [
+										"{{ebaseurl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 23 Sep 2022 09:20:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Content-Length",
+									"value": "165"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Proxy-Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": true,\n    \"message\": \"User Log in\",\n    \"response\": {\n        \"userId\": \"709\",\n        \"surname\": \"OOO \\\"ZOR-GO\\\"\",\n        \"name\": null,\n        \"patronym\": null,\n        \"token\": \"50825764ecfad8b2f89269c16efad6e5\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "{{epassword}}",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "{{elogin}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "SMS",
+			"item": [
+				{
+					"name": "Send Invoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"998974450544\",\r\n    \"order_id\": 5125454,\r\n    \"payment_type\": 8,\r\n    \"lang\": \"uz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ebaseurl}}/sms/send-invoice",
+							"host": [
+								"{{ebaseurl}}"
+							],
+							"path": [
+								"sms",
+								"send-invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"998974450544\",\r\n    \"text\": \"Hello Inson!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ebaseurl}}/sms/send",
+							"host": [
+								"{{ebaseurl}}"
+							],
+							"path": [
+								"sms",
+								"send"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "merchant-info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ebaseurl}}/payments/merchant-info",
+							"host": [
+								"{{ebaseurl}}"
+							],
+							"path": [
+								"payments",
+								"merchant-info"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{login}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "elogin",
+			"value": "AVTO_UZ",
+			"type": "string"
+		},
+		{
+			"key": "epassword",
+			"value": "5KY(&3Y0Kp",
+			"type": "string"
+		},
+		{
+			"key": "ebaseurl",
+			"value": "https://api.insonline.uz",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "8b2be82858f6b297c19ece25a1e95fac"
+		}
+	]
+}
